@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>SMS Manager</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="clientesPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+	 </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let x of data">
+		 
+		  <h3> <input type="checkbox" [(ngModel)]="x.checked"> {{x.nome}}</h3>
+		  <h3>{{x.telefone}}</h3>
+		  <p>{{x.texto}}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>

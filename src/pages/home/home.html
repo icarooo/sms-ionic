@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Clientes</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="clientesPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+
+
+
+<ion-content class="home">
+
+
+
+<ion-list>
+	<button ion-item *ngFor="let x of data">
+
+      <h3>{{x.nome}}</h3>
+      <h3>{{x.cpfcnpj}} {{x.sms}}</h3>
+      <p>{{x.rua + ' ' + x.numero +' ' + x.complemento +' ' + x.bairro}}</p>
+    </button>
+</ion-list>
+	
+
+
+
+</ion-content>

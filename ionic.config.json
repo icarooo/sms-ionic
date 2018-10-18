@@ -1,0 +1,7 @@
+{
+  "name": "ionic2SMS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
